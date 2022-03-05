@@ -19,35 +19,11 @@ const Menu = () => {
         </h1>
 
         <div className="flex flex-col gap-4">
-          <Link href="/List">
-            <a>
-              <Button name="Kanto" />
-            </a>
-          </Link>
-
-          <Link href="/List">
-            <a>
-              <Button name="Johto" />
-            </a>
-          </Link>
-
-          <Link href="/List">
-            <a>
-              <Button name="Hoenn" />
-            </a>
-          </Link>
-
-          <Link href="/List">
-            <a>
-              <Button name="Sinnoh" />
-            </a>
-          </Link>
-
-          <Link href="/List">
-            <a>
-              <Button name="Unova" />
-            </a>
-          </Link>
+          <Button name="kanto" />
+          <Button name="johto" />
+          <Button name="hoenn" />
+          <Button name="sinnoh" />
+          <Button name="unova" />
         </div>
       </div>
     </div>
