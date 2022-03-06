@@ -4,7 +4,9 @@
 
 Hello 👋.
 
-Pokédex App my own personal project and practice.
+I'm Carlos, a Front End Developer.
+
+This is my Pokédex App my own personal project and practice.
 
 I really like the Pokémon franchise and for fun and inspiration I made this app with Next.js and the PokéApi api, I really enjoyed working on this.
 
