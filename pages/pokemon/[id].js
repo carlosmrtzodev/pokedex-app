@@ -19,7 +19,7 @@ export default function Pokemon({ data }) {
   return (
     <>
       <Head>
-        <title>Pokédex - {data.name}</title>
+        <title className="capitalize">Pokédex - {data.name}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 

@@ -11,7 +11,7 @@ export default function Region({ lists }) {
   return (
     <>
       <Head>
-        <title>Pokédex - {region}</title>
+        <title className="capitalize">Pokédex - {region}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
