@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import List from "../../components/pages/List";
-import Buttons from "../../components/elements/buttons";
+import Buttons from "../../components/elements/Buttons";
 import Container from "../../components/container/Container";
 
 export default function Region({ lists }) {
