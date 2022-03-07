@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Buttons from "../../components/elements/Buttons";
 import Content from "../../components/container/Content";
@@ -17,6 +18,11 @@ export default function Pokemon({ data }) {
 
   return (
     <>
+      <Head>
+        <title>Pokédex - {data.name}</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
       <Container>
         <Content>
           <div className="w-2/3 mx-auto">

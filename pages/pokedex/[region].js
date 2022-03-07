@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import List from "../../components/pages/List";
 import Buttons from "../../components/elements/Buttons";
@@ -9,6 +10,11 @@ export default function Region({ lists }) {
 
   return (
     <>
+      <Head>
+        <title>Pokédex - {region}</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
       <Container>
         <div className="pt-20 lg:pt-4 pb-12">
           <h1 className="font-sans font-bold text-center text-2xl mb-4">

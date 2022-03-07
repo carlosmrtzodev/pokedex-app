@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import pokeball from "../assets/pokeball.png";
 import Credits from "../components/pages/Credits";
@@ -7,6 +8,11 @@ import Container from "../components/container/Container";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Pokédex App</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
       <Container>
         <Content>
           <div className="w-2/3 mx-auto">
