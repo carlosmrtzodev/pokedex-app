@@ -10,6 +10,10 @@ export default function Home() {
     <>
       <Head>
         <title>Pokédex App</title>
+        <meta
+          name="description"
+          content="Pokédex App my own personal project and practice."
+        />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 

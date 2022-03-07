@@ -8,10 +8,18 @@ export default function Region({ lists }) {
   const router = useRouter();
   const { region } = router.query;
 
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   return (
     <>
       <Head>
-        <title className="capitalize">Pokédex - {region}</title>
+        <title>Pokédex - {capitalizeFirstLetter(region)}</title>
+        <meta
+          name="description"
+          content="Pokédex App my own personal project and practice."
+        />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 

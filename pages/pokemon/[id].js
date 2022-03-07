@@ -16,10 +16,18 @@ export default function Pokemon({ data }) {
     ? (region = "sinnoh")
     : "/";
 
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   return (
     <>
       <Head>
-        <title className="capitalize">Pokédex - {data.name}</title>
+        <title>Pokédex - {capitalizeFirstLetter(data.name)}</title>
+        <meta
+          name="description"
+          content="Pokédex App my own personal project and practice."
+        />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
