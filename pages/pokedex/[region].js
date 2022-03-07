@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import List from "../../components/pages/List";
-import Button from "../../components/elements/button";
+import Buttons from "../../components/elements/buttons";
 import Container from "../../components/container/Container";
 
 export default function Region({ lists }) {
@@ -16,7 +16,7 @@ export default function Region({ lists }) {
           </h1>
 
           <div className="w-48 mx-auto">
-            <Button text="Go Back" url="/" />
+            <Buttons text="Go Back" url="/" />
           </div>
         </div>
 

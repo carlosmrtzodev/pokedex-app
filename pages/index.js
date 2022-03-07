@@ -1,7 +1,7 @@
 import Image from "next/image";
 import pokeball from "../assets/pokeball.png";
 import Credits from "../components/pages/Credits";
-import Button from "../components/elements/Buttons";
+import Buttons from "../components/elements/Buttons";
 import Content from "../components/container/Content";
 import Container from "../components/container/Container";
 export default function Home() {
@@ -23,10 +23,10 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 gap-4">
-            <Button text="kanto" url="/pokedex/kanto" />
-            <Button text="johto" url="/pokedex/johto" />
-            <Button text="hoenn" url="/pokedex/hoenn" />
-            <Button text="sinnoh" url="/pokedex/sinnoh" />
+            <Buttons text="kanto" url="/pokedex/kanto" />
+            <Buttons text="johto" url="/pokedex/johto" />
+            <Buttons text="hoenn" url="/pokedex/hoenn" />
+            <Buttons text="sinnoh" url="/pokedex/sinnoh" />
           </div>
         </Content>
 

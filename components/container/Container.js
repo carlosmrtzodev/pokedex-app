@@ -5,7 +5,7 @@ import GitHub from "../elements/GitHub";
 const Container = ({ children }) => {
   return (
     <>
-      <div className="transition-all ease-in-out bg-grey dark:bg-dark duration-300">
+      <div className="transition-all ease-in-out bg-grey dark:bg-dblue duration-300">
         <div className="fixed top-0 right-0 m-4">
           <Toggle />
         </div>

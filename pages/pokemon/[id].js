@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "../../components/elements/Buttons";
+import Buttons from "../../components/elements/Buttons";
 import Content from "../../components/container/Content";
 import Container from "../../components/container/Container";
 
@@ -38,7 +38,7 @@ export default function Pokemon({ data }) {
             {data.abilities.map((ability) => (
               <p
                 key={ability.ability.name}
-                className="capitalize bg-light text-dark text-center w-full rounded-br-full rounded-tr-full px-4 py-1"
+                className="capitalize bg-light text-dblue text-center w-full rounded-br-full rounded-tr-full px-4 py-1"
               >
                 {ability.ability.name}
               </p>
@@ -57,7 +57,7 @@ export default function Pokemon({ data }) {
           </div>
 
           <div className="grid grid-cols-1 gap-4">
-            <Button text="Go Back" url={`/pokedex/${region}`} />
+            <Buttons text="Go Back" url={`/pokedex/${region}`} />
           </div>
         </Content>
       </Container>

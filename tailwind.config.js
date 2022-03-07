@@ -12,7 +12,7 @@ module.exports = {
     },
     colors: {
       red: "#ef233c",
-      dark: "#2b2d42",
+      dblue: "#2b2d42",
       grey: "#8d99ae",
       dred: "#d90429",
       light: "#edf2f4",
@@ -32,7 +32,7 @@ module.exports = {
       rock: "#B6A136",
       ghost: "#735797",
       dragon: "#6F35FC",
-      darks: "#705746",
+      dark: "#705746",
       steel: "#B7B7CE",
       fairy: "#D685AD",
     },

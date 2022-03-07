@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import pokeballAlt from "../../assets/pokeball-alt.png";
 
-const Button = ({ text, url }) => {
+const Buttons = ({ text, url }) => {
   return (
     <>
       <Link href={url}>
@@ -25,4 +25,4 @@ const Button = ({ text, url }) => {
   );
 };
 
-export default Button;
+export default Buttons;
