@@ -38,7 +38,7 @@ export default function Pokemon({ data }) {
             {data.abilities.map((ability) => (
               <p
                 key={ability.ability.name}
-                className="capitalize bg-light text-dblue text-center w-full rounded-br-full rounded-tr-full px-4 py-1"
+                className="capitalize bg-light text-dark text-center w-full rounded-br-full rounded-tr-full px-4 py-1"
               >
                 {ability.ability.name}
               </p>
@@ -49,7 +49,7 @@ export default function Pokemon({ data }) {
             {data.types.map((type) => (
               <p
                 key={type.type.name}
-                className={`font-mono capitalize bg-${type.type.name} text-lg w-full rounded-br-full rounded-tr-full px-4 py-1 my-4`}
+                className={`font-mono capitalize bg-red text-lg w-full rounded-br-full rounded-tr-full px-4 py-1 my-4`}
               >
                 {type.type.name}
               </p>
