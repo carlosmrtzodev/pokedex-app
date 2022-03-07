@@ -1,69 +1,74 @@
-import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/router";
+import List from "../../components/pages/List";
+import Top from "../../components/elements/Top";
+import GitHub from "../../components/elements/GitHub";
+import Button from "../../components/elements/button";
+import Toggle from "../../components/elements/Toggle";
+import Container from "../../components/container/Container";
 
 export default function Region({ lists }) {
   const router = useRouter();
   const { region } = router.query;
 
   return (
-    <div className="bg-dark">
-      <div className="container mx-auto py-8">
-        <h1 className="font-sans capitalize font-bold text-3xl text-light mb-8">
-          National Pokédex {region}
-        </h1>
+    <>
+      <Container>
+        <div className="fixed right-0 top-0 m-2">
+          <Toggle />
+        </div>
 
-        <Link href="/">
-          <a className="font-sans transition ease-in-out text-xl text-dark bg-light rounded-br-full rounded-tr-full delay-150 duration-300 py-2 px-8 hover:bg-red hover:text-light">
-            Go back
-          </a>
-        </Link>
-      </div>
+        <div className="container flex flex-col w-2/3 md:w-4/5 mx-auto gap-12">
+          <div className="mt-20 lg:mt-2">
+            <div className="text-center mb-8 lg:mb-2">
+              <GitHub />
+            </div>
 
-      <div className="container mx-auto grid grid-cols-4 gap-8 py-8">
-        {lists.map((list) => (
-          <Link
-            href={`/pokemon/${list.url
-              .split("/")
-              .filter((x) => x)
-              .pop()}`}
-            key={list.name}
-          >
-            <a className="flex justify-between items-center transition ease-in-out bg-red drop-shadow-xl rounded-tr-full rounded-br-full delay-150 duraion-300 pl-4 hover:bg-scarlet hover:animate-bounce">
-              <span className="font-mono font-semibold capitalize text-light text-lg">
-                <p>
-                  #
-                  {list.url
-                    .split("/")
-                    .filter((x) => x)
-                    .pop()}
-                </p>
-                <p>{list.name}</p>
-              </span>
+            <h1 className="font-mono font-bold text-2xl md:text-3xl mb-4">
+              National Pokédex of {region}
+            </h1>
 
-              <Image
-                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${list.url
+            <div className="w-48">
+              <Button
+                text="Go Back"
+                url="/"
+                color="light"
+                bg="red"
+                hover="dred"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-8">
+            {lists.map((list) => (
+              <List
+                name={list.name}
+                number={list.url
                   .split("/")
                   .filter((x) => x)
-                  .pop()}.png`}
-                alt={list.name}
-                width={80}
-                height={80}
-                className="bg-light rounded-full"
+                  .pop()}
+                key={list.name}
               />
-            </a>
-          </Link>
-        ))}
-      </div>
-    </div>
+            ))}
+          </div>
+        </div>
+
+        <Top />
+      </Container>
+    </>
   );
 }
 export const getStaticProps = async ({ params }) => {
-  if (params.region === "kanto") var filter = "?limit=151&offset=0";
-  else if (params.region === "johto") var filter = "?limit=100&offset=151";
-  else if (params.region === "hoenn") var filter = "?limit=135&offset=251";
-  else if (params.region === "sinnoh") var filter = "?limit=107&offset=386";
-  else if (params.region === "unova") var filter = "?limit=156&offset=493";
+  var filter = "";
+
+  params.region === "kanto"
+    ? (filter = "?limit=151&offset=0")
+    : params.region === "johto"
+    ? (filter = "?limit=100&offset=151")
+    : params.region === "hoenn"
+    ? (filter = "?limit=135&offset=251")
+    : params.region === "sinnoh"
+    ? (filter = "?limit=107&offset=386")
+    : null;
 
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon${filter}`);
   const data = await response.json();
@@ -79,8 +84,8 @@ export const getStaticPaths = async () => {
     { params: { region: "johto" } },
     { params: { region: "hoenn" } },
     { params: { region: "sinnoh" } },
-    { params: { region: "unova" } },
   ];
+
   return {
     paths,
     fallback: "blocking",
