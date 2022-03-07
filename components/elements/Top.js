@@ -27,7 +27,7 @@ const Top = () => {
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed animate-bounce transition-all ease-in-out bg-red text-light rounded-tr-full rounded-tl-full text-3xl md:text-2xl m-2 p-2 right-0 bottom-0 duration-300 hover:bg-dred hover:animate-none"
+          className="animate-bounce transition-all ease-in-out bg-red text-light rounded-tr-full rounded-tl-full text-2xl p-2 duration-300 hover:bg-dred hover:animate-none"
         >
           <FontAwesomeIcon icon={faArrowUp} />
         </button>
