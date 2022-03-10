@@ -4,7 +4,8 @@
 
 ## 📄 Intro.
 
-This is a Pokedex App With Next - Tailwind CSS and PokéAPI REST.
+[![Pokédex App Banner](./assets/banner.png)](https://pokedex-app-rouge.vercel.app/)
+This is a Pokédex App With Next - Tailwind CSS and PokéAPI REST.
 
 ## 💼 Used technologies
 
