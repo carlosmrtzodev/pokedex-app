@@ -4,8 +4,10 @@
 
 ## 📄 Intro.
 
-[![Pokédex App Banner](./assets/banner.png)](https://pokedex-app-rouge.vercel.app/)
+<div align="center">
 This is a Pokédex App With Next - Tailwind CSS and PokéAPI REST.
+[![Pokédex App Banner](./assets/banner.png)](https://pokedex-app-rouge.vercel.app/)
+</div>
 
 ## 💼 Used technologies
 
