@@ -5,7 +5,7 @@
 ## 📄 Intro.
 
 <div align="center">
-This is my Pokédex App With Next - Tailwind CSS and PokéAPI REST. <br><br>
+This is my Pokédex App With Next.js, Tailwind CSS and PokéAPI REST. <br><br>
 </div>
 
 [![Pokédex App Banner](./assets/banner.png)](https://pokedex-app-rouge.vercel.app/)
@@ -15,8 +15,8 @@ This is my Pokédex App With Next - Tailwind CSS and PokéAPI REST. <br><br>
 ![](https://img.shields.io/badge/Markup-HTML-informational?style=for-the-badge&logo=html5&logoColor=edf2f4&color=ef233c&labelColor=2b2d42)
 ![](https://img.shields.io/badge/Style-CSS-informational?style=for-the-badge&logo=css3&logoColor=edf2f4&color=ef233c&labelColor=2b2d42)
 ![](https://img.shields.io/badge/Code-JavaScript-informational?style=for-the-badge&logo=JavaScript&logoColor=edf2f4&color=ef233c&labelColor=2b2d42)
-![](https://img.shields.io/badge/Code-React-informational?style=for-the-badge&logo=react&logoColor=edf2f4&color=ef233c&labelColor=2b2d42)
-![](https://img.shields.io/badge/Code-Next-informational?style=for-the-badge&logo=next.js&logoColor=edf2f4&color=ef233c&labelColor=2b2d42)
+![](https://img.shields.io/badge/Code-React.js-informational?style=for-the-badge&logo=react&logoColor=edf2f4&color=ef233c&labelColor=2b2d42)
+![](https://img.shields.io/badge/Code-Next.js-informational?style=for-the-badge&logo=next.js&logoColor=edf2f4&color=ef233c&labelColor=2b2d42)
 ![](https://img.shields.io/badge/Style-Tailwind%20CSS-informational?style=for-the-badge&logo=Tailwind-CSS&logoColor=edf2f4&color=ef233c&labelColor=2b2d42)
 
 ## 🚨 Forking this repo
