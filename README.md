@@ -5,7 +5,7 @@
 ## 📄 Intro.
 
 <div align="center">
-This is a Pokédex App With Next - Tailwind CSS and PokéAPI REST. <br><br>
+This is my Pokédex App With Next - Tailwind CSS and PokéAPI REST. <br><br>
 </div>
 
 [![Pokédex App Banner](./assets/banner.png)](https://pokedex-app-rouge.vercel.app/)
