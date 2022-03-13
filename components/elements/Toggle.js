@@ -7,7 +7,7 @@ const Toggle = () => {
 
   return (
     <>
-      <div className="flex animate-pulse transition-all ease-in-out bg-red rounded-full duration-300 hover:bg-dred">
+      <div className="flex transition-all ease-in-out bg-red rounded-full duration-300 hover:bg-dred">
         {colorTheme === "light" ? (
           <FontAwesomeIcon
             icon={faSun}

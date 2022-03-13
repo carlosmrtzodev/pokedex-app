@@ -14,7 +14,6 @@ const Card = ({ pokemon, pokedexnumber }) => {
                 alt="Icons made by Freepik"
                 width={20}
                 height={20}
-                className="animate-spin"
               />
             </p>
             <p>{pokemon}</p>
