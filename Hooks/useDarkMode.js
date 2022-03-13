@@ -4,7 +4,7 @@ function useDarkMode() {
   const [theme, setTheme] = useState(
     typeof window !== "undefined" ? localStorage.theme : "dark"
   );
-  const colorTheme = theme === "dark" ? "dark" : "light";
+  const colorTheme = theme === "dark" ? "light" : "dark";
 
   useEffect(() => {
     const root = window.document.documentElement;
