@@ -10,14 +10,14 @@ const Toggle = () => {
       <div className="flex transition-all ease-in-out bg-red rounded-full duration-300 hover:bg-dred">
         {colorTheme === "light" ? (
           <FontAwesomeIcon
-            icon={faSun}
-            onClick={() => setTheme("light")}
+            icon={faMoon}
+            onClick={() => setTheme("dark")}
             className="cursor-pointer text-light text-2xl p-2"
           />
         ) : (
           <FontAwesomeIcon
-            icon={faMoon}
-            onClick={() => setTheme("dark")}
+            icon={faSun}
+            onClick={() => setTheme("light")}
             className="cursor-pointer text-light text-2xl p-2"
           />
         )}
