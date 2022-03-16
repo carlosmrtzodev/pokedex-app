@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import pokeball from "../../assets/pokeball.png";
-import Content from "../../components/container/Content";
-import Container from "../../components/container/Container";
+import pokeball from "../assets/pokeball.png";
+import Buttons from "../components/elements/Buttons";
+import Content from "../components/container/Content";
+import Container from "../components/container/Container";
 
 export default function Error() {
   return (
@@ -23,24 +24,30 @@ export default function Error() {
         <meta property="og:locale:alternate" content="es_ES" />
         <link rel="apple-touch-icon" href="/Logo.png" />
         <link rel="manifest" href="/manifest.json" />
-        <title>Pokédex - {capitalizeFirstLetter(region)}</title>
+        <title>404: This page could not be found</title>
       </Head>
 
       <Container>
         <Content>
           <div className="w-2/3 mx-auto">
-            <Image
-              src={pokeball}
-              alt="Icons made by Freepik"
-              width={200}
-              height={200}
-            />
+            <figure>
+              <Image
+                src={pokeball}
+                alt="Icons made by Freepik"
+                width={200}
+                height={200}
+              />
+            </figure>
           </div>
 
           <div className="my-4">
             <h1 className="font-sans font-bold text-2xl">
-              404 Error, Page not Found
+              404: This page could not be found
             </h1>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4">
+            <Buttons text="Go Back" url="/" />
           </div>
         </Content>
       </Container>

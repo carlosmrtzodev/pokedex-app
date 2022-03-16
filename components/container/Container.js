@@ -7,7 +7,7 @@ const Container = ({ children }) => {
     <>
       <div className="bg-grey dark:bg-bckg transition-all ease-in-out duration-200">
         <div className="fixed top-0 right-0 m-4">
-          <Toggle />
+          {process.browser ? <Toggle /> : null}
         </div>
 
         <div className="absolute top-0 left-0 m-4">

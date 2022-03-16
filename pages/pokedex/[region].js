@@ -35,7 +35,7 @@ export default function Region({ lists }) {
 
       <Container>
         <div className="pt-20 lg:pt-4 pb-12">
-          <h1 className="font-sans font-bold text-center text-2xl mb-4">
+          <h1 className="font-sans font-bold text-center text-2xl text-bckg dark:text-light mb-4">
             National Pokédex of {region}
           </h1>
 
@@ -71,14 +71,21 @@ export const getStaticProps = async ({ params }) => {
     ? (filter = "?limit=135&offset=251")
     : params.region === "sinnoh"
     ? (filter = "?limit=107&offset=386")
-    : null;
+    : (filter = "/error");
 
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon${filter}`);
-  const data = await response.json();
 
-  return {
-    props: { lists: data.results },
-  };
+  try {
+    const data = await response.json();
+
+    if (!data) {
+      return { notFound: true };
+    }
+
+    return { props: { lists: data.results } };
+  } catch (data) {
+    return { notFound: true };
+  }
 };
 
 export const getStaticPaths = async () => {
