@@ -1,23 +1,12 @@
 import Link from "next/link";
-import Image from "next/image";
-import pokeballAlt from "../../assets/pokeball-alt.png";
 
 const Buttons = ({ text, url }) => {
   return (
     <>
       <Link href={url}>
         <a>
-          <button className="relative font-mono capitalize transition-all ease-in-out bg-red border-dred w-full rounded-br-full rounded-tr-full text-lg border-2 duration-300 p-1 hover:bg-dred hover:scale-105">
+          <button className="font-mono text-lg capitalize bg-red border-hover hover:bg-hover transition-all ease-in-out duration-300 hover:scale-105 w-full border-2 rounded-br-full rounded-tr-full p-2">
             {text}
-
-            <figure className="absolute top-2 right-1">
-              <Image
-                src={pokeballAlt}
-                alt="Icons made by Freepik"
-                width={20}
-                height={20}
-              />
-            </figure>
           </button>
         </a>
       </Link>

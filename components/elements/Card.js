@@ -4,7 +4,7 @@ import pokeballAlt from "../../assets/pokeball-alt.png";
 const Card = ({ pokemon, pokedexnumber }) => {
   return (
     <>
-      <div className="flex justify-between items-center transition-all ease-in-out bg-red border-dred w-full drop-shadow-xl rounded-tr-full rounded-br-full duraion-300 border-4 pl-4 hover:bg-dred">
+      <div className="flex justify-between items-center bg-red hover:bg-hover border-hover transition-all ease-in-out duraion-300 w-full drop-shadow-xl rounded-tr-full rounded-br-full border-4 pl-4">
         <span className="capitalize">
           <div className="font-mono font-normal text-lg">
             <p className="flex items-center gap-4">

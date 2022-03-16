@@ -23,12 +23,22 @@ export default function Pokemon({ data }) {
   return (
     <>
       <Head>
-        <title>Pokédex - {capitalizeFirstLetter(data.name)}</title>
+        <meta charset="utf-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#E54222" />
+        <meta property="og:title" content="Pokédex App" />
+        <meta property="og:url" content="pokedex-app-rouge.vercel.app/" />
+        <meta property="og:image" content="/OG image.png" />
         <meta
-          name="description"
-          content="Pokédex App my own personal project and practice."
+          property="og:description"
+          content="Pokédex App in Next.js, Tailwind CSS and PokéAPI REST."
         />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:locale:alternate" content="es_ES" />
+        <link rel="apple-touch-icon" href="/Logo.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <title>Pokédex - {capitalizeFirstLetter(data.name)}</title>
       </Head>
 
       <Container>
@@ -43,7 +53,7 @@ export default function Pokemon({ data }) {
           </div>
 
           <div className="my-4">
-            <h1 className="font-sans capitalize font-bold text-2xl">
+            <h1 className="font-sans font-bold capitalize text-2xl">
               {data.name}
             </h1>
           </div>
@@ -52,7 +62,7 @@ export default function Pokemon({ data }) {
             {data.abilities.map((ability) => (
               <p
                 key={ability.ability.name}
-                className="capitalize bg-light text-dark text-center w-full rounded-br-full rounded-tr-full px-4 py-1"
+                className="capitalize text-center bg-light text-bckg w-full rounded-br-full rounded-tr-full px-4 py-1"
               >
                 {ability.ability.name}
               </p>
@@ -63,7 +73,9 @@ export default function Pokemon({ data }) {
             {data.types.map((type) => (
               <p
                 key={type.type.name}
-                className={`font-mono capitalize bg-red text-lg w-full rounded-br-full rounded-tr-full px-4 py-1 my-4`}
+                className={`font-mono text-lg capitalize ${
+                  `bg-` + type.type.name
+                } w-full rounded-br-full rounded-tr-full px-4 py-1 my-4`}
               >
                 {type.type.name}
               </p>

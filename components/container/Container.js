@@ -5,10 +5,11 @@ import GitHub from "../elements/GitHub";
 const Container = ({ children }) => {
   return (
     <>
-      <div className="transition-all ease-in-out bg-grey dark:bg-dark duration-300">
+      <div className="bg-grey dark:bg-bckg transition-all ease-in-out duration-200">
         <div className="fixed top-0 right-0 m-4">
           <Toggle />
         </div>
+
         <div className="absolute top-0 left-0 m-4">
           <GitHub />
         </div>

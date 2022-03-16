@@ -5,8 +5,12 @@ const Credits = ({ text, link, url }) => {
     <>
       <p className="font-mono text-lg">
         {text} {""}
-        <Link href={url}>
-          <a className="font-bold transition-all ease-in-out duration-300 hover:text-red">
+        <Link href={url} passHref>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold hover:text-red transition-all ease-in-out duration-200"
+          >
             {link}
           </a>
         </Link>
