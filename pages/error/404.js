@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import pokeball from "../assets/pokeball.png";
-import Content from "../components/container/Content";
+import pokeball from "../../assets/pokeball.png";
+import Content from "../../components/container/Content";
 import Container from "../../components/container/Container";
 
 export default function Error() {
