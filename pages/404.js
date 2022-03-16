@@ -5,7 +5,7 @@ import Buttons from "../components/elements/Buttons";
 import Content from "../components/container/Content";
 import Container from "../components/container/Container";
 
-export default function Error() {
+export default function NotFound() {
   return (
     <>
       <Head>

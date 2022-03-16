@@ -2,7 +2,7 @@ import Link from "next/link";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Contact = () => {
+const GitHub = () => {
   return (
     <>
       <Link href="https://github.com/carlosmrtzodev" passHref>
@@ -18,4 +18,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default GitHub;
