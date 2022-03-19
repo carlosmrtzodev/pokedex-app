@@ -89,7 +89,6 @@ const Pokemon = ({ abilities, types, region }) => {
             icon={<FontAwesomeIcon icon={faArrowLeft} />}
             text="Go Back"
             url={`/pokedex/${region}`}
-            type="btn__alt"
           />
         </div>
       </div>
@@ -101,15 +100,7 @@ const Content = ({ title, image, component, abilities, types, region }) => {
   return (
     <>
       <section className="content__container">
-        <div
-          className={`content__container-body ${
-            component === `pokemon`
-              ? `content__container-body_alt`
-              : component === `error`
-              ? `content__container-body_error`
-              : null
-          }`}
-        >
+        <div className="content__container-body">
           <figure>
             <Image
               src={image}

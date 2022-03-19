@@ -4,10 +4,10 @@ const Card = ({ pokemon, pokedexnumber }) => {
   return (
     <>
       <div className="card__container">
-        <span>
-          <p className="card__container-text">
+        <span className="card__container-body">
+          <p className="card__container-body_text">
             #{pokedexnumber}{" "}
-            <figure className="card__container-pokeball">
+            <figure className="card__container-body_pokeball">
               <Image
                 src="/pokeball-alt.png"
                 alt="Icons made by Freepik"
@@ -22,7 +22,7 @@ const Card = ({ pokemon, pokedexnumber }) => {
 
         <figure className="card__container-image">
           <Image
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/${pokedexnumber}.png`}
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokedexnumber}.svg`}
             alt={pokemon}
             width={75}
             height={75}

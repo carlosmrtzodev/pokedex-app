@@ -43,6 +43,7 @@
   }
 
   .region__container,
+  .card__container-body,
   .content__container-body,
   .content__container-body_info,
   .content__container-body_buttons,
@@ -65,7 +66,6 @@
 
   .btn,
   .card__container,
-  .content__container-body_alt,
   .content__container-body_info-abilities_ability {
     @apply bg-red;
   }
@@ -77,9 +77,9 @@
 
   .btn,
   .card__container,
-  .card__container-text,
-  .card__container-pokeball,
-  .content__container {
+  .content__container,
+  .card__container-body_text,
+  .card__container-body_pokeball {
     @apply flex items-center;
   }
 
@@ -94,7 +94,7 @@
   }
 
   .app {
-    @apply bg-black;
+    @apply bg-gray;
   }
 
   .app__container {
@@ -106,11 +106,7 @@
   }
 
   .content__container-body {
-    @apply border-red border-2 rounded-tr-full rounded-tl-full p-6 text-center;
-  }
-
-  .content__container-body_error {
-    @apply border-0;
+    @apply bg-black rounded-tr-full rounded-tl-full p-6 text-center;
   }
 
   .content__container-body_info-types {
@@ -119,10 +115,6 @@
 
   .btn {
     @apply gap-2 justify-center hover:scale-105;
-  }
-
-  .btn__alt {
-    @apply bg-hover;
   }
 
   .top {
@@ -146,18 +138,18 @@
   }
 
   .region__container-list {
-    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pb-12;
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-12;
   }
 
   .card__container {
     @apply justify-between pl-4;
   }
 
-  .card__container-text {
+  .card__container-body_text {
     @apply gap-4;
   }
 
   .card__container-image {
-    @apply bg-light rounded-full p-2;
+    @apply bg-black rounded-tr-full rounded-br-full px-8 py-2;
   }
 }
