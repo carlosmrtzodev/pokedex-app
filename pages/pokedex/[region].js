@@ -1,14 +1,17 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import List from "../../components/pages/List";
+import App from "../../components/container/App";
+import Top from "../../components/elements/Top";
+import List from "../../components/elements/List";
 import Buttons from "../../components/elements/Buttons";
-import Container from "../../components/container/Container";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Region({ lists }) {
   const router = useRouter();
   const { region } = router.query;
 
-  function capitalizeFirstLetter(string) {
+  function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
@@ -21,7 +24,7 @@ export default function Region({ lists }) {
         <meta name="theme-color" content="#E54222" />
         <meta property="og:title" content="Pokédex App" />
         <meta property="og:url" content="pokedex-app-rouge.vercel.app/" />
-        <meta property="og:image" content="/OG image.png" />
+        <meta property="og:image" content="/OGimage.png" />
         <meta
           property="og:description"
           content="Pokédex App in Next.js, Tailwind CSS and PokéAPI REST."
@@ -30,21 +33,26 @@ export default function Region({ lists }) {
         <meta property="og:locale:alternate" content="es_ES" />
         <link rel="apple-touch-icon" href="/Logo.png" />
         <link rel="manifest" href="/manifest.json" />
-        <title>Pokédex - {capitalizeFirstLetter(region)}</title>
+        <title>Pokédex | {capitalize(region)}</title>
       </Head>
 
-      <Container>
-        <div className="pt-20 lg:pt-4 pb-12">
-          <h1 className="font-sans font-bold text-center text-2xl text-bckg dark:text-light mb-4">
-            National Pokédex of {region}
+      <App>
+        <div className="region__container">
+          <h1 className="region__container-title">
+            National Pokédex of{" "}
+            <strong className="region__container-title_strong">{region}</strong>
           </h1>
 
-          <div className="w-48 mx-auto">
-            <Buttons text="Go Back" url="/" />
+          <div className="region__container-button">
+            <Buttons
+              icon={<FontAwesomeIcon icon={faArrowLeft} />}
+              text="Go Back"
+              url="/"
+            />
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 pb-12">
+        <div className="region__container-list">
           {lists.map((list) => (
             <List
               name={list.name}
@@ -56,7 +64,9 @@ export default function Region({ lists }) {
             />
           ))}
         </div>
-      </Container>
+      </App>
+
+      <Top />
     </>
   );
 }

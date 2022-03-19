@@ -6,16 +6,16 @@ module.exports = {
   ],
   theme: {
     screens: {
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
+      sm: "768px",
+      md: "1024px",
+      lg: "1140px",
     },
     colors: {
       red: "#E54222",
-      bckg: "#0C3348",
-      grey: "#DFDFDF",
+      black: "#2b2d42",
       hover: "#CE2211",
-      light: "#FFFFFF",
+      light: "#edf2f4",
+      gray: "#8d99ae",
 
       normal: "#A8A77A",
       fire: "#EE8130",
@@ -36,7 +36,16 @@ module.exports = {
       steel: "#B7B7CE",
       fairy: "#D685AD",
     },
-    extend: {},
+    fontFamily: {
+      lato: ["Lato", "sans-serif"],
+    },
+    extend: {
+      fontSize: {
+        title: "24px",
+        subtitle: "20px",
+        small: "16px",
+      },
+    },
   },
   plugins: [],
 };

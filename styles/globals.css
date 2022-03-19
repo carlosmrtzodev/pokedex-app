@@ -1,18 +1,159 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+@layer base {
+  p,
+  h1,
+  h3,
+  h4,
+  button {
+    @apply text-light;
+  }
+
+  p,
+  button {
+    @apply text-small capitalize;
+  }
+
+  h3,
+  h4 {
+    @apply font-bold capitalize;
+  }
+
+  * {
+    @apply m-0 p-0 list-none no-underline box-border scroll-smooth font-lato;
+  }
+
+  h1 {
+    @apply font-bold text-title;
+  }
+
+  h3 {
+    @apply text-subtitle;
+  }
 }
 
-h1,
-h2,
-p,
-a,
-span {
-  color: #ffffff;
+@layer components {
+  .btn,
+  .top__icon,
+  .card__container {
+    @apply transition-all ease-in-out duration-200;
+  }
+
+  .region__container,
+  .content__container-body,
+  .content__container-body_info,
+  .content__container-body_buttons,
+  .content__container-body_info-abilities {
+    @apply flex flex-col gap-4;
+  }
+
+  .btn,
+  .card__container,
+  .content__container-body_info-types_type,
+  .content__container-body_info-abilities_ability {
+    @apply w-full rounded-br-full rounded-tr-full;
+  }
+
+  .btn,
+  .content__container-body_info-types_type,
+  .content__container-body_info-abilities_ability {
+    @apply p-2;
+  }
+
+  .btn,
+  .card__container,
+  .content__container-body_alt,
+  .content__container-body_info-abilities_ability {
+    @apply bg-red;
+  }
+
+  .btn,
+  .card__container {
+    @apply hover:bg-hover;
+  }
+
+  .btn,
+  .card__container,
+  .card__container-text,
+  .card__container-pokeball,
+  .content__container {
+    @apply flex items-center;
+  }
+
+  .card__container,
+  .content__container-body {
+    @apply drop-shadow-2xl;
+  }
+
+  .content__container-body_title,
+  .region__container-title_strong {
+    @apply capitalize;
+  }
+
+  .app {
+    @apply bg-black;
+  }
+
+  .app__container {
+    @apply w-4/5 min-h-screen mx-auto;
+  }
+
+  .content__container {
+    @apply justify-center min-h-screen;
+  }
+
+  .content__container-body {
+    @apply border-red border-2 rounded-tr-full rounded-tl-full p-6 text-center;
+  }
+
+  .content__container-body_info-types {
+    @apply flex gap-4;
+  }
+
+  .btn {
+    @apply gap-2 justify-center hover:scale-105;
+  }
+
+  .btn__alt {
+    @apply bg-hover;
+  }
+
+  .top {
+    @apply fixed bottom-0 right-0 m-6;
+  }
+
+  .top__icon {
+    @apply text-title text-red hover:text-hover;
+  }
+
+  .region__container {
+    @apply items-center py-12;
+  }
+
+  .region__container-title {
+    @apply font-normal;
+  }
+
+  .region__container-button {
+    @apply w-48;
+  }
+
+  .region__container-list {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pb-12;
+  }
+
+  .card__container {
+    @apply justify-between pl-4;
+  }
+
+  .card__container-text {
+    @apply gap-4;
+  }
+
+  .card__container-image {
+    @apply bg-light rounded-full p-2;
+  }
 }

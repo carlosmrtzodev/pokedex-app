@@ -1,11 +1,11 @@
+import Card from "./Card";
 import Link from "next/link";
-import Card from "../elements/Card";
 
 const List = ({ name, number }) => {
   return (
     <>
       <Link href={`/pokemon/${number}`}>
-        <a className="hover:animate-bounce">
+        <a>
           <Card pokemon={name} pokedexnumber={number} />
         </a>
       </Link>
