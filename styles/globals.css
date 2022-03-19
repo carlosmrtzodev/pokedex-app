@@ -109,6 +109,10 @@
     @apply border-red border-2 rounded-tr-full rounded-tl-full p-6 text-center;
   }
 
+  .content__container-body_error {
+    @apply border-0;
+  }
+
   .content__container-body_info-types {
     @apply flex gap-4;
   }

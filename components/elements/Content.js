@@ -103,7 +103,11 @@ const Content = ({ title, image, component, abilities, types, region }) => {
       <section className="content__container">
         <div
           className={`content__container-body ${
-            component === `pokemon` ? `content__container-body_alt` : null
+            component === `pokemon`
+              ? `content__container-body_alt`
+              : component === `error`
+              ? `content__container-body_error`
+              : null
           }`}
         >
           <figure>
