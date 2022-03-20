@@ -98,7 +98,7 @@
   }
 
   .app__container {
-    @apply w-4/5 min-h-screen mx-auto;
+    @apply lg:max-w-5xl w-3/4 min-h-screen mx-auto;
   }
 
   .content__container {
@@ -138,7 +138,7 @@
   }
 
   .region__container-list {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-12;
+    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 pb-12;
   }
 
   .card__container {
