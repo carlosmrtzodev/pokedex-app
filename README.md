@@ -1,7 +1,7 @@
 ## 📄 Intro.
 
 <div align="center">
-This is my Pokédex App With Next.js, Tailwind CSS and PokéAPI REST. <br><br>
+Pokédex App in Next.js, Tailwind CSS and PokéAPI REST. <br><br>
 </div>
 
 [![Pokédex App Banner](./public/banner.png)](https://pokedex-app-rouge.vercel.app/)
